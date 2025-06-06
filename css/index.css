@@ -1,0 +1,273 @@
+/*ESTILOS GENERALES*/
+
+body {
+    background-color: #f2f0ed;
+    font-family: sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto auto auto;
+}
+
+a {
+    color: #333;
+}
+
+/* === HEADER Y NAV ==== */
+
+header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    position: relative;    
+    overflow: hidden;         
+}
+
+header img {
+    filter: brightness(60%);
+}
+
+.titulo-header {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: white;
+    font-size: 88px;
+    font-weight: bold;
+    z-index: 2;       /* por encima de la imagen */
+    margin: 0;
+}
+
+body:not(.pagina-principal) nav { /*Para los NAV de las páginas que NO son el INDEX */
+    background-color: #333;
+    padding: 20px;
+    padding-left: 100px;
+}
+.pagina-principal nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 200px;
+    margin: 0;
+    padding: 0;
+    padding-right: 50px;
+    list-style: none;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+.resaltar:hover {
+    transform: scale(1.25);
+}
+
+.titulo {
+    text-decoration: none;
+}
+
+/*ASIDE*/
+
+aside {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 70px;
+}
+
+aside h2 {
+    padding-left: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 20px;
+}
+
+aside ul li {
+    padding-bottom: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+section {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+/*FOOTER AREA*/
+
+footer {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 40px 20px 20px;
+}
+
+.pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.pie2 {
+    flex: 1 1 200px;
+}
+
+.pie2 h4,.pie2 h3 {
+    margin-bottom: 10px;
+}
+
+.pie2 ul li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.pie2 ul li a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.pie3 {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.redes {
+    color: #f2f2f2;
+}
+
+.redes:visited {
+    color: #f2f2f2;
+}
+
+/*PÁGINA PRINCIPAL*/
+
+.pagina-principal .resaltarimg:hover {
+    transform: scale(1.15);
+}
+
+.pagina-principal .sudaderas p:first-of-type,
+.pagina-principal .camisetas p:first-of-type,      /*  QUE SE LE APLIQUE EL MARGIN A EL PRIMER P DE LA CLASE CAMISETAS  */
+.pagina-principal .pantalones p:first-of-type {
+    margin-top: 40px;
+}
+
+.pagina-principal article {
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 60px;
+    padding-left: 0;
+}
+
+.pagina-principal article h2 {
+    font-size: 28px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.pagina-principal article img {
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.pagina-principal .grupo-productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*PÁGINAS DE PRODUCTO*/
+
+.pagina-producto section {
+    height: 800px;
+    padding-bottom: 50px;
+}
+
+.pagina-producto article {
+    padding-left: 50px;
+}
+
+.pagina-producto article img {
+    position: absolute;
+    top: 0;
+    margin-top: 250px;
+    margin-bottom: 60px;
+    text-align: left;
+}
+
+.pagina-producto .carro {
+    display: block;
+    width: 450px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border: 1px solid #333;
+    cursor: pointer;
+    margin: 100px auto;
+}
+.pagina-producto .descripcion {
+    padding-top: 20px;
+    text-align: center;
+    margin: 100px;
+}
+
+/*PÁGINAS DE INFORMACIÓN */
+
+.pagina-info section {
+    height: 800px;
+    padding-bottom: 50px;
+}
+
+.pagina-info article {
+    padding-left: 50px;
+}
+
+.pagina-info.pagina-contacto section {
+    padding-left: 100px;
+}
+
+.pagina-info h3 {
+    font-size: 40px;
+}
+
+.pagina-info section {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.redes{
+    padding-right: 15px;
+}
+
+.imagen-envio {
+    margin-left: 400px;
+}
